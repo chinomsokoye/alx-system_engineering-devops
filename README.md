@@ -18,4 +18,4 @@ _What do the commands_ **cp** **rm** **mv** **mkdir** _do_
 
 ## Working with Commands
 
-_What do **type** **which** **help** **man** _do_
+_What do_ **type** **which** **help** **man** _do_
