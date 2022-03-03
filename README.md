@@ -23,7 +23,7 @@ _What do_ **type** **which** **help** **man** _do_
 
 ### Reading _Man_ Pages
 
-* What are _ man_ pages section
+* What are _man_ pages
 * How to read _man_ pages
 
 ### Other _Man_ Pages
