@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Display thhe content of a/the file
+
+FILE="/etc/passwd"
+while IFS= read -r line
+do
+	echo "$line" | cut -d':' --fields=1,3,6
+done < "$FILE"
