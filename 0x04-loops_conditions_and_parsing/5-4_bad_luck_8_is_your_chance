@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Loops from 1 to 10, display different at iteration
+
+COUNTER=0
+while [ $COUNTER -lt 11 ]
+do
+	if [ $COUNTER = 4 ]
+	then
+		echo "bad luck"
+	elif [ $COUNTER = 8 ]
+	then
+		echo "good luck"
+	else
+		echo "Best School"
+	fi
+	(( COUNTER+=1 ))
+done
