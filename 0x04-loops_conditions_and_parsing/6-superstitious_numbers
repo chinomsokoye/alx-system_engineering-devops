@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# Display numbers from 1 to 20, display differently at iteration
+
+COUNTER=1
+while [ $COUNTER -lt 21 ]
+do
+	case $COUNTER in
+	     4)
+		echo $COUNTER
+		echo "bad luck from China"
+		;;
+	     9)
+		echo $COUNTER
+		echo "bad luck from Japan"
+		;;
+	     17)
+		echo $COUNTER
+		echo "bad luck from Italy"
+		;;
+	     *)
+		echo $COUNTER
+		;;
+	esac
+	(( COUNTER+=1 ))
+done
