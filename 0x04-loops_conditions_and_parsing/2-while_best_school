@@ -5,5 +5,5 @@ COUNTER=0
 while [ $COUNTER -lt 10 ]
 do
 	echo "Best School"
-	COUNTER+=1
+	(( COUNTER+=1 ))
 done
