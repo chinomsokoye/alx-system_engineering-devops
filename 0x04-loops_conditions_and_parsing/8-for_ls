@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Display content of current memory in list format
+
+for i in *
+do
+	echo "$i" | cut -d'-' -f2
+done
