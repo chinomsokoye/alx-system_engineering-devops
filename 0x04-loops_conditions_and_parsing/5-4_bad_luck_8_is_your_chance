@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Loops from 1 to 10, display different at iteration
 
-COUNTER=0
+COUNTER=1
 while [ $COUNTER -lt 11 ]
 do
 	if [ $COUNTER = 4 ]
