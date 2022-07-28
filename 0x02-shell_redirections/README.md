@@ -14,7 +14,7 @@
 
 ### Special Characters
 
-* Understand what do the _white spaces, single quotes, double quotes, backslash, comment, pipe, command seperator, tilde_ and how and when to use them
+* Understand what do the **_white spaces, single quotes, double quotes, backslash, comment, pipe, command seperator, tilde_** and how and when to use them
 
 ### Other Man Pages
 
