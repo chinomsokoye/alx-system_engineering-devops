@@ -1,4 +1,4 @@
-# Set up a client SSH configuration file
+# Sets up a client SSH configuration file
 
 include stdlib
 file_line { 'Declare identity file':
