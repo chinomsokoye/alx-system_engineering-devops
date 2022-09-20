@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Fix an issue from a server page container
+
+service apache2 start
