@@ -1,16 +1,13 @@
 #!/usr/bin/env bash
 # Install and configure HAproxy on server
-
-CFG="\\\nlisten appname 0.0.0.0:80\n\tmode http\n\tbalance roundrobin\n\toption httpclose\n\toption forwardfor\n\tserver 18149-web-01 35.172.217.245 check\n\tserver 18149-web-01 18.205.96.171 check\n"
-
+apt-get -y --no-install-reommends software-properties-common
+add-apt-repository -y ppa:vbernat/haproxy-2.6
 apt-get -y update
-apt-get -y install nginx
-apt-get install -y haproxy
-
-sed -i "s/ENABLED=0/ENABLED=1/" /etc/default/haproxy
-
-cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.backup
-
-sed -i "\$a $CFG" /etc/haproxy/haproxy.cfg
-
+apt-get -y install haproxy=2.6.\*
+sed -i '/errorfile 504/a listen nomso' /etc/haproxy/haproxy.cfg
+sed -i '/listen nomso/a\tbind : 80' /etc/haproxy/haproxy.cfg
+sed -i '/bind :80/a\tmode http' /etc/haproxy/haproxy.cfg
+sed -i '/mode http/a\tserver 18149-web-01 35.172.217.245:80 check' /etc/haproxy/haproxy.cfg
+sed -i '/server 18149-web-01 35.172.217.245:80 check/a\tserver 18149-web-02 18.205.96.171:80 check' /etc/haproxy/haproxy.cfg
+sed -i '/#EXTRAOPTS="-de -m 16"/a ENABLED=1' /etc/default/haproxy
 service haproxy start
