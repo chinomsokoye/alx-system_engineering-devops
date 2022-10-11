@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # web debugging
 pkill -f apache2
-sudo sed -i 's/80 default_server/8080 default_server/' /etc/nginx/sites-available/default
 sudo chown nginx:nginx /etc/nginx/nginx.conf
-sudo chown 755 /etc/nginx/nginx.conf
+sudo chown 777 /etc/nginx/nginx.conf
+sudo sed -i 's/80/8080/g' /etc/nginx/sites-available/default
 sudo -u nginx service nginx restart
