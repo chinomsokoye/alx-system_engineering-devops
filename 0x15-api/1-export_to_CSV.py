@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ Returns information about TODO list update/progress
-Export data to CSV """
+Export data in the CSV format """
 import csv
 import requests
 from sys import argv
