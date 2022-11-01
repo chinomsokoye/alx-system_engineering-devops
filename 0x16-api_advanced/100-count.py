@@ -46,4 +46,4 @@ def count_words(subreddit, word_list):
 
 
 if __name__ == "__main__":
-    recurse(argv[1])
+    count_words(argv[1], argv[2].split(' '))
